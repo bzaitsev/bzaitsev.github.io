@@ -501,7 +501,7 @@ var AppComponent = /** @class */ (function () {
             // set data
             _this.allWeather = data;
             _this.detailedWeather = data.list[0];
-            _this.iconUrl = "http://openweathermap.org/img/w/" + _this.detailedWeather.weather[0].icon + ".png";
+            _this.iconUrl = "https://openweathermap.org/img/w/" + _this.detailedWeather.weather[0].icon + ".png";
             _this.weatherStatus = _this.detailedWeather.weather[0].main;
             if (_this.firstLoad) {
                 _this.firstLoad = false;
@@ -741,7 +741,7 @@ var WeatherService = /** @class */ (function () {
     function WeatherService(http) {
         this.http = http;
         // http://api.openweathermap.org/data/2.5/forecast?q=London&cnt=2&appid=06de189f9149b695124a27a8abeeffcb
-        this.weatherUrl = 'http://api.openweathermap.org/data/2.5/forecast';
+        this.weatherUrl = 'https://api.openweathermap.org/data/2.5/forecast';
     }
     WeatherService.prototype.getWeather = function (city) {
         var params = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["URLSearchParams"]();
